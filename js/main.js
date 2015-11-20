@@ -1,3 +1,8 @@
+function mineNode() {
+  this.strstatus = "unclicked";
+  this.boolIsMine = false;
+  this.surroundMines = 0;
+};
 var mineGame = (rows , cols, mines){
   this.rows = rows;
   this.cols = cols;
@@ -21,6 +26,11 @@ var mineGame = (rows , cols, mines){
 				i--;
 			}
 		}
-    }
+  };
+  this.checkClick = function(){ // logic to verify the Clicked element is mine or not
+    //if Is Mine -- Alert Game Over & Display the Items
+
+    //else Display the adjecent Bombs
+  };
   };
 };
