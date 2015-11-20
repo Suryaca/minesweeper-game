@@ -9,6 +9,7 @@ var mineGame = function(rows,cols,mines){
   this.cols = cols;
   this.mines = mines;
   this.isGameOver = false;
+  //this.boardSize = row * cols;
   this.board=[[]];
 
   this.drawBoard = function(){
@@ -48,11 +49,10 @@ var mineGame = function(rows,cols,mines){
   };
   this.checkClick = function(row , col) { // logic to verify the Clicked element is mine or not
 
-    if ((this.board[row][col].hasmine == true )|| clickCounter == (this.rows * this.cols))
-      console.log(" Has Mine");
-    else
-      console.log("Got Lucky")
-
+    if(this.board[row][col].hasMine === true )
+      console.log( row , col + " Has Mine");
+    // else
+    //   console.log(row , col + " Got Lucky");
   };
 };
 
